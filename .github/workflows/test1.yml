@@ -21,7 +21,7 @@ jobs:
           BLACKDUCK_TRUST_CERT: true
           
         with:
-          ### SCANNING: Require fields
+          ### SCANNING: Require fields2
           blackducksca_url: https://172.212.45.166
           blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackducksca_fixpr_enabled: true
