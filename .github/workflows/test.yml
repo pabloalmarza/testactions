@@ -30,7 +30,7 @@ jobs:
         
         uses: blackduck-inc/black-duck-security-scan@6ee400ee2502a366bdff13cddae76bbde804fd20 #v2.1.1
 
-        ### Use below configuration to set specific detect environment variables
+        ### Use below configuration to set specific detect environment variable
         env:
           DETECT_PROJECT_NAME: "GenAI"
           BLACKDUCK_TRUST_CERT: true
@@ -57,6 +57,7 @@ jobs:
         env:
           DETECT_PROJECT_NAME: "GenAI"
           BLACKDUCK_TRUST_CERT: true
+          DETECT_PROJECT_VERSION_NAME: "centralservices_1.1.1"
         with:
           blackducksca_url: ${{ vars.BLACKDUCK_SERVER_URL  }}
           blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
@@ -68,6 +69,6 @@ jobs:
 
           ### Arbitrary product-related CL arguments
           detect_search_depth: 10
-          detect_args: '--detect.diagnostic=true --detect.detector.search.depth=10'
+          detect_args: '--detect.diagnostic=true'
           
 
